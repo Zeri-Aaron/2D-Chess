@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6752763849016671298}
   - component: {fileID: 6752763849016671299}
+  - component: {fileID: 2337899153017668825}
   m_Layer: 5
   m_Name: Chesspiece
   m_TagString: Untagged
@@ -26,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 6752763849016671297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,3 +90,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2337899153017668825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6752763849016671297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac92e68b2c21caf4f97103ca953ad752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
+  whitePawn: {fileID: 21300000, guid: 5543b4bc896a3fc47bd1343e4161dfe7, type: 3}
+  whiteKnight: {fileID: 21300000, guid: a033e08c2d5a78e409edf87b4d664452, type: 3}
+  whiteBishop: {fileID: 21300000, guid: c3fd9f4d99f77b641979c3e3ae9bb4f9, type: 3}
+  whiteRook: {fileID: 21300000, guid: d35f137855836d4499ee520dc505be2b, type: 3}
+  whiteQueen: {fileID: 21300000, guid: 3ddb058932f9adb4dbd5d1ccc2548356, type: 3}
+  whiteKing: {fileID: 21300000, guid: 6adbb8060d821d042a5eeee735f8efb2, type: 3}
+  blackPawn: {fileID: 21300000, guid: ec63684800f860c4697202b2c14378e1, type: 3}
+  blackKnight: {fileID: 21300000, guid: c7a845c380a32104db5e71dd8eee60dd, type: 3}
+  blackBishop: {fileID: 21300000, guid: eda86edc7a0877c43a670efb92b0853a, type: 3}
+  blackRook: {fileID: 21300000, guid: a455da5cb96f4a24593ff1b1ddfbbdda, type: 3}
+  blackQueen: {fileID: 21300000, guid: 397813fd704256b4c884df597416c65a, type: 3}
+  blackKing: {fileID: 21300000, guid: bbcc1648825ac6441b753ae5dbae864b, type: 3}
