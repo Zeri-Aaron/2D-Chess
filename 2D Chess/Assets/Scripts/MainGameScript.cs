@@ -65,4 +65,23 @@ public class MainGameScript : MonoBehaviour
 
         positions[cpp.getXBoard(), cpp.getYBoard()] = chessObj;
     }
+
+
+    // Getters and setters for the positions
+    public void setPositionEmpty(int x, int y)
+    {
+        positions[x, y] = null;
+    }
+
+    public GameObject getPosition(int x, int y)
+    {
+        return positions[x, y];
+    }
+
+    public bool positionPieceOnBoard(int x, int y)
+    {
+        if (x < 0 || y < 0 || x >= positions.GetLength(0) || y >= positions.GetLength(1))
+            return false;
+        return true;
+    }
 }
