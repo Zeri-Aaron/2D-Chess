@@ -43,42 +43,46 @@ public class MainGameScript : MonoBehaviour
 
         for (int i=0;i<whitePlayer.Length;i++)
         {
-            setPosition(whitePlayer[i]);
-            setPosition(blackPlayer[i]);
+            SetPosition(whitePlayer[i]);
+            SetPosition(blackPlayer[i]);
         }
     }
 
+    // Placing the chess pieces when the game starts
     public GameObject Create(string name, int x, int y)
     {
-        GameObject chessObj = Instantiate(chessPiece, new(0, 0, -1), Quaternion.identity);
+        GameObject chessObj = Instantiate(chessPiece, new(0, 0, 1), Quaternion.identity);
         ChessPiecesPlaces cpp = chessObj.GetComponent<ChessPiecesPlaces>();
         cpp.name = name;
-        cpp.setXBoard(x);
-        cpp.setYBoard(y);
+        cpp.SetXBoard(x);
+        cpp.SetYBoard(y);
         cpp.Activate();
         return chessObj;
     }
 
-    public void setPosition(GameObject chessObj)
+    // Setting the chess pieces' right positoins at whole on the chessboard
+    public void SetPosition(GameObject chessObj)
     {
         ChessPiecesPlaces cpp = chessObj.GetComponent<ChessPiecesPlaces>();
 
-        positions[cpp.getXBoard(), cpp.getYBoard()] = chessObj;
+        positions[cpp.GetXBoard(), cpp.GetYBoard()] = chessObj;
     }
 
 
     // Getters and setters for the positions
-    public void setPositionEmpty(int x, int y)
+    public void SetPositionEmpty(int x, int y)
     {
         positions[x, y] = null;
     }
 
-    public GameObject getPosition(int x, int y)
+    public GameObject GetPosition(int x, int y)
     {
         return positions[x, y];
     }
 
-    public bool positionPieceOnBoard(int x, int y)
+
+    // LOGIC: if a chess piece is out of the board then return false, otherwise it is inside the board return true
+    public bool PositionPieceOnBoard(int x, int y)
     {
         if (x < 0 || y < 0 || x >= positions.GetLength(0) || y >= positions.GetLength(1))
             return false;
