@@ -30,19 +30,19 @@ public class ChessPiecesPlaces : MonoBehaviour
 
         switch (this.name)
         {
-            case "whitePawn": this.GetComponent<SpriteRenderer>().sprite = whitePawn; player = "white"; break;
-            case "whiteKnight": this.GetComponent<SpriteRenderer>().sprite = whiteKnight; player = "white"; break;
-            case "whiteBishop": this.GetComponent<SpriteRenderer>().sprite = whiteBishop; player = "white"; break;
-            case "whiteRook": this.GetComponent<SpriteRenderer>().sprite = whiteRook; player = "white"; break;
-            case "whiteQueen": this.GetComponent<SpriteRenderer>().sprite = whiteQueen; player = "white"; break;
-            case "whiteKing": this.GetComponent<SpriteRenderer>().sprite = whiteKing; player = "white"; break;
+            case "White Pawn": this.GetComponent<SpriteRenderer>().sprite = whitePawn; player = "white"; break;
+            case "White Knight": this.GetComponent<SpriteRenderer>().sprite = whiteKnight; player = "white"; break;
+            case "White Bishop": this.GetComponent<SpriteRenderer>().sprite = whiteBishop; player = "white"; break;
+            case "White Rook": this.GetComponent<SpriteRenderer>().sprite = whiteRook; player = "white"; break;
+            case "White Queen": this.GetComponent<SpriteRenderer>().sprite = whiteQueen; player = "white"; break;
+            case "White King": this.GetComponent<SpriteRenderer>().sprite = whiteKing; player = "white"; break;
 
-            case "blackPawn": this.GetComponent<SpriteRenderer>().sprite = blackPawn; player = "black"; break;
-            case "blackKnight": this.GetComponent<SpriteRenderer>().sprite = blackKnight; player = "black"; break;
-            case "blackBishop": this.GetComponent<SpriteRenderer>().sprite = blackBishop; player = "black"; break;
-            case "blackRook": this.GetComponent<SpriteRenderer>().sprite = blackRook; player = "black"; break;
-            case "blackQueen": this.GetComponent<SpriteRenderer>().sprite = blackQueen; player = "black"; break;
-            case "blackKing": this.GetComponent<SpriteRenderer>().sprite = blackKing; player = "black"; break;
+            case "Black Pawn": this.GetComponent<SpriteRenderer>().sprite = blackPawn; player = "black"; break;
+            case "Black Knight": this.GetComponent<SpriteRenderer>().sprite = blackKnight; player = "black"; break;
+            case "Black Bishop": this.GetComponent<SpriteRenderer>().sprite = blackBishop; player = "black"; break;
+            case "Black Rook": this.GetComponent<SpriteRenderer>().sprite = blackRook; player = "black"; break;
+            case "Black Queen": this.GetComponent<SpriteRenderer>().sprite = blackQueen; player = "black"; break;
+            case "Black King": this.GetComponent<SpriteRenderer>().sprite = blackKing; player = "black"; break;
         }
     }
 
@@ -62,7 +62,7 @@ public class ChessPiecesPlaces : MonoBehaviour
         x += -6.9f;
         y += -3.03f;
 
-        this.transform.position = new Vector3(x, y, -1.0f);
+        this.transform.position = new Vector3(x, y, -3.0f);
     }
 
     // Getter and Setter Algorithm (Making the code cleaner and maintainable)
@@ -110,7 +110,7 @@ public class ChessPiecesPlaces : MonoBehaviour
         switch (this.name)
         {
             // References of the plates for the legal moves of each chess piece on the board
-            case "whitePawn":
+            case "White Pawn":
                 if (yBoard == 1)
                 {
                     PawnReferencePlate(xBoard, yBoard + 1);
@@ -121,7 +121,7 @@ public class ChessPiecesPlaces : MonoBehaviour
                     PawnReferencePlate(xBoard, yBoard + 1);
                 }
                 break;
-            case "blackPawn":
+            case "Black Pawn":
                 if (yBoard == 6)
                 {
                     PawnReferencePlate(xBoard, yBoard - 1);
@@ -133,29 +133,29 @@ public class ChessPiecesPlaces : MonoBehaviour
                 }
                 break;
 
-            case "whiteKnight":
-            case "blackKnight":
+            case "White Knight":
+            case "Black Knight":
                 LShapeReferencePlate();
                 break;
 
-            case "whiteBishop":
-            case "blackBishop":
+            case "White Bishop":
+            case "Black Bishop":
                 GeneralLineReferencePlate(1, 1);
                 GeneralLineReferencePlate(-1, 1);
                 GeneralLineReferencePlate(-1, -1);
                 GeneralLineReferencePlate(1, -1);
                 break;
 
-            case "whiteRook":
-            case "blackRook":
+            case "White Rook":
+            case "Black Rook":
                 GeneralLineReferencePlate(1, 0);
                 GeneralLineReferencePlate(0, 1);
                 GeneralLineReferencePlate(-1, 0);
                 GeneralLineReferencePlate(0, -1);
                 break;
 
-            case "whiteQueen":
-            case "blackQueen":
+            case "White Queen":
+            case "Black Queen":
                 GeneralLineReferencePlate(1, 0);
                 GeneralLineReferencePlate(1, 1);
                 GeneralLineReferencePlate(0, 1);
@@ -166,8 +166,8 @@ public class ChessPiecesPlaces : MonoBehaviour
                 GeneralLineReferencePlate(1, -1);
                 break;
 
-            case "whiteKing":
-            case "blackKing":
+            case "White King":
+            case "Black King":
                 OneReferencePlate();
                 break;
 

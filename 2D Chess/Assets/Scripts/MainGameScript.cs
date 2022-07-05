@@ -23,22 +23,22 @@ public class MainGameScript : MonoBehaviour
 
         whitePlayer = new GameObject[]
         {
-            Create("whiteRook", 0, 0), Create("whiteKnight", 1, 0), Create("whiteBishop", 2, 0),
-            Create("whiteQueen", 3, 0), Create("whiteKing", 4, 0), Create("whiteBishop", 5, 0),
-            Create("whiteKnight", 6, 0), Create("whiteRook", 7, 0), Create("whitePawn", 0, 1),
-            Create("whitePawn", 1, 1), Create("whitePawn", 2, 1), Create("whitePawn", 3, 1),
-            Create("whitePawn", 4, 1), Create("whitePawn", 5, 1), Create("whitePawn", 6, 1),
-            Create("whitePawn", 7, 1)
+            Create("White Rook", 0, 0), Create("White Knight", 1, 0), Create("White Bishop", 2, 0),
+            Create("White Queen", 3, 0), Create("White King", 4, 0), Create("White Bishop", 5, 0),
+            Create("White Knight", 6, 0), Create("White Rook", 7, 0), Create("White Pawn", 0, 1),
+            Create("White Pawn", 1, 1), Create("White Pawn", 2, 1), Create("White Pawn", 3, 1),
+            Create("White Pawn", 4, 1), Create("White Pawn", 5, 1), Create("White Pawn", 6, 1),
+            Create("White Pawn", 7, 1)
         };
 
         blackPlayer = new GameObject[]
         {
-            Create("blackRook", 0, 7), Create("blackKnight", 1, 7), Create("blackBishop", 2, 7),
-            Create("blackQueen", 3, 7), Create("blackKing", 4, 7), Create("blackBishop", 5, 7),
-            Create("blackKnight", 6, 7), Create("blackRook", 7, 7), Create("blackPawn", 0, 6),
-            Create("blackPawn", 1, 6), Create("blackPawn", 2, 6), Create("blackPawn", 3, 6),
-            Create("blackPawn", 4, 6), Create("blackPawn", 5, 6), Create("blackPawn", 6, 6),
-            Create("blackPawn", 7, 6)
+            Create("Black Rook", 0, 7), Create("Black Knight", 1, 7), Create("Black Bishop", 2, 7),
+            Create("Black Queen", 3, 7), Create("Black King", 4, 7), Create("Black Bishop", 5, 7),
+            Create("Black Knight", 6, 7), Create("Black Rook", 7, 7), Create("Black Pawn", 0, 6),
+            Create("Black Pawn", 1, 6), Create("Black Pawn", 2, 6), Create("Black Pawn", 3, 6),
+            Create("Black Pawn", 4, 6), Create("Black Pawn", 5, 6), Create("Black Pawn", 6, 6),
+            Create("Black Pawn", 7, 6)
         };
 
         for (int i=0;i<whitePlayer.Length;i++)
@@ -51,7 +51,7 @@ public class MainGameScript : MonoBehaviour
     // Placing the chess pieces when the game starts
     public GameObject Create(string name, int x, int y)
     {
-        GameObject chessObj = Instantiate(chessPiece, new(0, 0, 1), Quaternion.identity);
+        GameObject chessObj = Instantiate(chessPiece, new(0, 0, -3), Quaternion.identity);
         ChessPiecesPlaces cpp = chessObj.GetComponent<ChessPiecesPlaces>();
         cpp.name = name;
         cpp.SetXBoard(x);
