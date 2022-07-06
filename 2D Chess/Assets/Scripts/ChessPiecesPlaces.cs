@@ -56,11 +56,11 @@ public class ChessPiecesPlaces : MonoBehaviour
         // y1 = spaces in between, <- = close, -> = far
         // x2 = place, <- = left, -> = right
         // y2 = place, <- down, -> up
-        x *= 0.925f;
+        x *= 0.924f;
         y *= 0.92f;
 
-        x += -6.9f;
-        y += -3.03f;
+        x += -6.89f;
+        y += -3.20f;
 
         this.transform.position = new Vector3(x, y, -3.0f);
     }
@@ -285,7 +285,7 @@ public class ChessPiecesPlaces : MonoBehaviour
         x += -6.9f;
         y += -3.22f;
 
-        GameObject placingPosition = Instantiate(referencePlate, new Vector3(x, y, -1.0f), Quaternion.identity);
+        GameObject placingPosition = Instantiate(referencePlate, new Vector3(x, y, -2.0f), Quaternion.identity);
 
         Plate plate = placingPosition.GetComponent<Plate>();
         plate.SetReference(gameObject);
@@ -302,9 +302,9 @@ public class ChessPiecesPlaces : MonoBehaviour
         y *= 0.92f;
 
         x += -6.9f;
-        y += -3.03f;
+        y += -3.22f;
 
-        GameObject placingPosition = Instantiate(referencePlate, new Vector3(x, y, -1.0f), Quaternion.identity);
+        GameObject placingPosition = Instantiate(referencePlate, new Vector3(x, y, -2.0f), Quaternion.identity);
 
         Plate plate = placingPosition.GetComponent<Plate>();
         plate.attackingPiece = true;
