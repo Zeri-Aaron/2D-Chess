@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainGameScript : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class MainGameScript : MonoBehaviour
     private GameObject[] blackPlayer = new GameObject[16];
 
     // Logics
-    private string currentPlayer = "WHITE";
+    private string currentPlayer = "white";
     private bool gameOver = false;
 
     // Start is called before the first frame update
@@ -87,5 +88,39 @@ public class MainGameScript : MonoBehaviour
         if (x < 0 || y < 0 || x >= positions.GetLength(0) || y >= positions.GetLength(1))
             return false;
         return true;
+    }
+
+    // Getter and setter for the player atenuation
+    public string GetCurrentPlayer()
+    {
+        return currentPlayer;
+    }
+
+    public bool IsGameOver()
+    {
+        return gameOver;
+    }
+
+    public void NextPlayerTurn()
+    {
+        if (currentPlayer == "white")
+        {
+            currentPlayer = "black";
+        } 
+        else
+        {
+            currentPlayer = "white";
+        }
+    }
+
+    // Resetting the game when it is over
+    public void Update()
+    {
+        if (gameOver == true && Input.GetMouseButtonDown(0))
+        {
+            gameOver = false;
+
+            SceneManager.LoadScene("GameScene");
+        }
     }
 }
