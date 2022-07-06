@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3ddb058932f9adb4dbd5d1ccc2548356, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c19430138baab44cb893b23904dff5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 1.03}
+  m_Size: {x: 0.69, y: 0.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,12 +105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
   referencePlate: {fileID: 1671803048114798021, guid: d8f04ec74649f3c42937dbdf11fa1251, type: 3}
-  whitePawn: {fileID: 21300000, guid: 5543b4bc896a3fc47bd1343e4161dfe7, type: 3}
-  whiteKnight: {fileID: 21300000, guid: a033e08c2d5a78e409edf87b4d664452, type: 3}
-  whiteBishop: {fileID: 21300000, guid: c3fd9f4d99f77b641979c3e3ae9bb4f9, type: 3}
-  whiteRook: {fileID: 21300000, guid: d35f137855836d4499ee520dc505be2b, type: 3}
-  whiteQueen: {fileID: 21300000, guid: 3ddb058932f9adb4dbd5d1ccc2548356, type: 3}
-  whiteKing: {fileID: 21300000, guid: 6adbb8060d821d042a5eeee735f8efb2, type: 3}
+  whitePawn: {fileID: 21300000, guid: e089b31eeaf38e347b8afd417c9e11e6, type: 3}
+  whiteKnight: {fileID: 21300000, guid: 57bf4c675f1154b47a536d4acd0616a7, type: 3}
+  whiteBishop: {fileID: 21300000, guid: e0cf0c8b1c8609c4f8b80814c805b2bb, type: 3}
+  whiteRook: {fileID: 21300000, guid: e17e3370218d9724ab34efa989053e5f, type: 3}
+  whiteQueen: {fileID: 21300000, guid: 4c19430138baab44cb893b23904dff5b, type: 3}
+  whiteKing: {fileID: 21300000, guid: 3ad6df527811cfa438e89fc5973c82e3, type: 3}
   blackPawn: {fileID: 21300000, guid: ec63684800f860c4697202b2c14378e1, type: 3}
   blackKnight: {fileID: 21300000, guid: c7a845c380a32104db5e71dd8eee60dd, type: 3}
   blackBishop: {fileID: 21300000, guid: eda86edc7a0877c43a670efb92b0853a, type: 3}
@@ -134,8 +134,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.03}
-    newSize: {x: 0.64, y: 1.03}
+    oldSize: {x: 0.69, y: 0.69}
+    newSize: {x: 0.69, y: 0.69}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
