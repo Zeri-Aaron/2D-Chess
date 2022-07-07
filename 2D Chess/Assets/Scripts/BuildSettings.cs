@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class BuildSettings : MonoBehaviour
 {
-    public void GameScene() 
+    public void GameScene3D() 
     {
-        StartCoroutine(D_GameScene());
+        StartCoroutine(D_GameScene3D());
     }
 
+    public void GameScene2D() 
+    {
+        StartCoroutine(D_GameScene2D());
+    }
     public void Back() 
     {
         StartCoroutine(D_Back());
@@ -20,12 +24,24 @@ public class BuildSettings : MonoBehaviour
         StartCoroutine(D_BacktoMainMenu());
     }
 
+    public void ChooseChessSet() 
+    {
+        StartCoroutine(D_ChooseChessSet());
+    }
+
     public void Options() 
     {
         StartCoroutine(D_Options());
     }
 
-    IEnumerator D_GameScene() 
+    IEnumerator D_GameScene3D() 
+    {
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator D_GameScene2D() 
     {
         yield return new WaitForSeconds(1);
 
@@ -46,10 +62,17 @@ public class BuildSettings : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    IEnumerator D_Options() 
+    IEnumerator D_ChooseChessSet() 
     {
         yield return new WaitForSeconds(1);
 
         SceneManager.LoadScene(1);
+    }
+
+    IEnumerator D_Options() 
+    {
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(4);
     }
 }

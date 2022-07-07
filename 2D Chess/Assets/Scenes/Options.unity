@@ -1075,7 +1075,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123027339}
         m_TargetAssemblyTypeName: BuildSettings, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: BacktoMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
