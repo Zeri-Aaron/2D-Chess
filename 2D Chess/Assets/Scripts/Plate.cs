@@ -12,6 +12,8 @@ public class Plate : MonoBehaviour
     int positionX;
     int positionY;
 
+    
+
     // false = moving | true = attacking
     public bool attackingPiece = false;
 
@@ -27,28 +29,44 @@ public class Plate : MonoBehaviour
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
 
+        if (attackingPiece)
         {
-            if (attackingPiece)
+            GameObject chessPiece = gameController.GetComponent<MainGameScript>().
+                GetPosition(positionX, positionY);
+            MainGameScript mainGame = gameController.GetComponent<MainGameScript>();
+
+            // Needs to be fixed
+            float whiteInc = 0.0f;
+            float blackInc = 0.0f;
+            if (mainGame.GetCurrentPlayer() == "white")
             {
-                GameObject chessPiece = gameController.GetComponent<MainGameScript>().
-                    GetPosition(positionX, positionY);
-                Destroy(chessPiece);
+                Instantiate(chessPiece, new(-7.5f + whiteInc, -4.5f, -3), Quaternion.identity);
+                whiteInc += 0.5f;
+                Debug.Log(whiteInc);
+            }
+            if (mainGame.GetCurrentPlayer() == "black")
+            {
+                Instantiate(chessPiece, new(-7.5f + blackInc, 4.5f, -3), Quaternion.identity);
+                blackInc += 0.5f;
             }
 
-            gameController.GetComponent<MainGameScript>().SetPositionEmpty(
-                referencePlate.GetComponent<ChessPiecesPlaces>().GetXBoard(),
-                referencePlate.GetComponent<ChessPiecesPlaces>().GetYBoard());
-
-            referencePlate.GetComponent<ChessPiecesPlaces>().SetXBoard(positionX);
-            referencePlate.GetComponent<ChessPiecesPlaces>().SetYBoard(positionY);
-            referencePlate.GetComponent<ChessPiecesPlaces>().SetCoordinates();
-
-            gameController.GetComponent<MainGameScript>().SetPosition(referencePlate);
-
-            gameController.GetComponent<MainGameScript>().NextPlayerTurn();
-
-            referencePlate.GetComponent<ChessPiecesPlaces>().DestroyReferencePlates();
+            Destroy(chessPiece);
         }
+
+        gameController.GetComponent<MainGameScript>().SetPositionEmpty(
+            referencePlate.GetComponent<ChessPiecesPlaces>().GetXBoard(),
+            referencePlate.GetComponent<ChessPiecesPlaces>().GetYBoard());
+
+        referencePlate.GetComponent<ChessPiecesPlaces>().SetXBoard(positionX);
+        referencePlate.GetComponent<ChessPiecesPlaces>().SetYBoard(positionY);
+        referencePlate.GetComponent<ChessPiecesPlaces>().SetCoordinates();
+
+        gameController.GetComponent<MainGameScript>().SetPosition(referencePlate);
+
+        gameController.GetComponent<MainGameScript>().NextPlayerTurn();
+
+        referencePlate.GetComponent<ChessPiecesPlaces>().DestroyReferencePlates();
+        
     }
 
     public void SetCoordinates(int x, int y)
