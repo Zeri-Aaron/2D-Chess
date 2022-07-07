@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
-  referencePlate: {fileID: 1671803048114798021, guid: d8f04ec74649f3c42937dbdf11fa1251, type: 3}
+  referencePlate: {fileID: 8529666968095548149, guid: 7bc3c1482abd59244be37eeda97d5d22, type: 3}
   whitePawn: {fileID: 21300000, guid: e089b31eeaf38e347b8afd417c9e11e6, type: 3}
   whiteKnight: {fileID: 21300000, guid: 57bf4c675f1154b47a536d4acd0616a7, type: 3}
   whiteBishop: {fileID: 21300000, guid: e0cf0c8b1c8609c4f8b80814c805b2bb, type: 3}

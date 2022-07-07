@@ -89,9 +89,13 @@ public class ChessPiecesPlaces : MonoBehaviour
     // Built-in function in Unity that lets the user work with 2D Collider when mouse is clicked
     public void OnMouseUp()
     {
-        DestroyReferencePlates();
+        if (!gameController.GetComponent<MainGameScript>().IsGameOver() &&
+            gameController.GetComponent<MainGameScript>().GetCurrentPlayer() == player)
+        {
+            DestroyReferencePlates();
 
-        InitiateReferencePlates();
+            InitiateReferencePlates();
+        }
     }
 
     // Destroying each reference plate by finding objects with tag named "RefPlate" function

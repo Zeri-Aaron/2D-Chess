@@ -45,6 +45,8 @@ public class Plate : MonoBehaviour
 
             gameController.GetComponent<MainGameScript>().SetPosition(referencePlate);
 
+            gameController.GetComponent<MainGameScript>().NextPlayerTurn();
+
             referencePlate.GetComponent<ChessPiecesPlaces>().DestroyReferencePlates();
         }
     }
