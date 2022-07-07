@@ -19,7 +19,7 @@ public class Plate : MonoBehaviour
     {
         if (attackingPiece)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
         }
     }
 
