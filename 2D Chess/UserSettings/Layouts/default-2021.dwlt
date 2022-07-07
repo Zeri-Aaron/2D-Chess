@@ -48,7 +48,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 60
+=======
+  controlID: 64
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +227,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 61
+=======
+  controlID: 90
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +256,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 25
+=======
+  controlID: 91
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,13 +329,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Game Assets
+=======
+    - Assets/Scripts
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Game Assets
+=======
+  - Assets/Scripts
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Blesselle\Documents\GitHub\Classic-2D-Chess\2D-Chess\2D
     Chess
@@ -331,9 +351,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 3a600000
     m_LastClickedID: 24634
     m_ExpandedIDs: 000000003a6000004e600000
+=======
+    m_SelectedIDs: 54600000
+    m_LastClickedID: 24660
+    m_ExpandedIDs: 000000003460000036600000386000003a6000003c6000003e600000406000004260000000ca9a3b
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +387,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003a600000
+=======
+    m_ExpandedIDs: 000000003460000036600000386000003a6000003c6000003e6000004060000042600000
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,7 +521,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 18fbffff
+=======
+      m_ExpandedIDs: 2cfbffff
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -762,9 +796,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -0.49627632, y: -0.13950182, z: -0.021623524}
     speed: 2
     m_Value: {x: -0.49627632, y: -0.13950182, z: -0.021623524}
+=======
+    m_Target: {x: -0.39229086, y: -0.26159176, z: 0.037027095}
+    speed: 2
+    m_Value: {x: -0.39229086, y: -0.26159176, z: 0.037027095}
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -815,9 +855,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 12.162347
     speed: 2
     m_Value: 12.162347
+=======
+    m_Target: 6.2972856
+    speed: 2
+    m_Value: 6.2972856
+>>>>>>> d29441c81d3c11122a9c54e1553394919e86e246
   m_Ortho:
     m_Target: 1
     speed: 2

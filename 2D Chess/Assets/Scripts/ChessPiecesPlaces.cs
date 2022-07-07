@@ -118,18 +118,19 @@ public class ChessPiecesPlaces : MonoBehaviour
                 if (yBoard == 1)
                 {
                     PawnReferencePlate(xBoard, yBoard + 1);
-                    PawnReferencePlate(xBoard, yBoard + 2);
+                    PawnReferencePlateTwo(xBoard, yBoard + 2);
                 } 
                 else
                 {
                     PawnReferencePlate(xBoard, yBoard + 1);
                 }
                 break;
+
             case "Black Pawn":
                 if (yBoard == 6)
                 {
                     PawnReferencePlate(xBoard, yBoard - 1);
-                    PawnReferencePlate(xBoard, yBoard - 2);
+                    PawnReferencePlateTwo(xBoard, yBoard - 2);
                 }
                 else
                 {
@@ -258,7 +259,7 @@ public class ChessPiecesPlaces : MonoBehaviour
             {
                 ReferencePlateCreate(x, y);
             }
-
+            // Needs to change the logic for the pawn
             if (mainGame.PositionPieceOnBoard(x + 1, y) && mainGame.GetPosition(x + 1, y) != null
                 && mainGame.GetPosition(x + 1, y).GetComponent<ChessPiecesPlaces>().player != player)
             {
@@ -269,6 +270,31 @@ public class ChessPiecesPlaces : MonoBehaviour
                 && mainGame.GetPosition(x - 1, y).GetComponent<ChessPiecesPlaces>().player != player)
             {
                 ReferencePlateAttackCreate(x - 1, y);
+            }
+        }
+    }
+
+    public void PawnReferencePlateTwo(int x, int y)
+    {
+        MainGameScript mainGame = gameController.GetComponent<MainGameScript>();
+
+        if (mainGame.PositionPieceOnBoard(x, y))
+        {
+            if (mainGame.GetPosition(x, y) == null)
+            {
+                ReferencePlateCreate(x, y);
+            }
+
+            if (mainGame.PositionPieceOnBoard(x + 1, y - 1) && mainGame.GetPosition(x + 1, y - 1) != null
+                && mainGame.GetPosition(x + 1, y - 1).GetComponent<ChessPiecesPlaces>().player != player)
+            {
+                ReferencePlateAttackCreate(x + 1, y - 1);
+            }
+
+            if (mainGame.PositionPieceOnBoard(x - 1, y + 1) && mainGame.GetPosition(x - 1, y - 1) != null
+                && mainGame.GetPosition(x - 1, y + 1).GetComponent<ChessPiecesPlaces>().player != player)
+            {
+                ReferencePlateAttackCreate(x - 1, y + 1);
             }
         }
     }
