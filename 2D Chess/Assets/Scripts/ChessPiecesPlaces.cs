@@ -284,18 +284,6 @@ public class ChessPiecesPlaces : MonoBehaviour
             {
                 ReferencePlateCreate(x, y);
             }
-
-            if (mainGame.PositionPieceOnBoard(x + 1, y - 1) && mainGame.GetPosition(x + 1, y - 1) != null
-                && mainGame.GetPosition(x + 1, y - 1).GetComponent<ChessPiecesPlaces>().player != player)
-            {
-                ReferencePlateAttackCreate(x + 1, y - 1);
-            }
-
-            if (mainGame.PositionPieceOnBoard(x - 1, y + 1) && mainGame.GetPosition(x - 1, y - 1) != null
-                && mainGame.GetPosition(x - 1, y + 1).GetComponent<ChessPiecesPlaces>().player != player)
-            {
-                ReferencePlateAttackCreate(x - 1, y + 1);
-            }
         }
     }
 
