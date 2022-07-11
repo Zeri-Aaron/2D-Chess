@@ -12,7 +12,9 @@ public class Plate : MonoBehaviour
     int positionX;
     int positionY;
 
-    
+    // Needs to be fixed
+    float whiteInc = 0.0f;
+    float blackInc = 0.0f;
 
     // false = moving | true = attacking
     public bool attackingPiece = false;
@@ -35,19 +37,13 @@ public class Plate : MonoBehaviour
                 GetPosition(positionX, positionY);
             MainGameScript mainGame = gameController.GetComponent<MainGameScript>();
 
-            // Needs to be fixed
-            float whiteInc = 0.0f;
-            float blackInc = 0.0f;
             if (mainGame.GetCurrentPlayer() == "white")
             {
                 Instantiate(chessPiece, new(-7.5f + whiteInc, -4.5f, -3), Quaternion.identity);
-                whiteInc += 0.5f;
-                Debug.Log(whiteInc);
             }
             if (mainGame.GetCurrentPlayer() == "black")
             {
                 Instantiate(chessPiece, new(-7.5f + blackInc, 4.5f, -3), Quaternion.identity);
-                blackInc += 0.5f;
             }
 
             Destroy(chessPiece);
