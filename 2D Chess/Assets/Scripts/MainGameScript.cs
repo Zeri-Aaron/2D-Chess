@@ -102,7 +102,7 @@ public class MainGameScript : MonoBehaviour
     }
 
     public void NextPlayerTurn()
-    {
+    { 
         if (currentPlayer == "white")
         {
             currentPlayer = "black";

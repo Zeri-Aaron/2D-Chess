@@ -12,18 +12,30 @@ public class Plate : MonoBehaviour
     int positionX;
     int positionY;
 
-    // Needs to be fixed
-    float whiteInc = 0.0f;
-    float blackInc = 0.0f;
+    float whiteInc;
+    float blackInc;
+
 
     // false = moving | true = attacking
     public bool attackingPiece = false;
 
     public void Start()
     {
+        gameController = GameObject.FindGameObjectWithTag("GameController");
         if (attackingPiece)
         {
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
+
+            MainGameScript mainGame = gameController.GetComponent<MainGameScript>();
+
+            if (mainGame.GetCurrentPlayer() == "white")
+            {
+                whiteInc += 0.5f;
+            }
+            if (mainGame.GetCurrentPlayer() == "black")
+            {
+                blackInc += 0.5f;
+            }
         }
     }
 
@@ -39,12 +51,16 @@ public class Plate : MonoBehaviour
 
             if (mainGame.GetCurrentPlayer() == "white")
             {
-                Instantiate(chessPiece, new(-7.5f + whiteInc, -4.5f, -3), Quaternion.identity);
+                Instantiate(chessPiece, new Vector3(-7.5f + whiteInc, -4.5f, -3), Quaternion.identity);
+                
             }
             if (mainGame.GetCurrentPlayer() == "black")
             {
-                Instantiate(chessPiece, new(-7.5f + blackInc, 4.5f, -3), Quaternion.identity);
+                Instantiate(chessPiece, new Vector3(-7.5f + blackInc, 4.5f, -3), Quaternion.identity);
+                
             }
+
+            
 
             Destroy(chessPiece);
         }
@@ -62,7 +78,6 @@ public class Plate : MonoBehaviour
         gameController.GetComponent<MainGameScript>().NextPlayerTurn();
 
         referencePlate.GetComponent<ChessPiecesPlaces>().DestroyReferencePlates();
-        
     }
 
     public void SetCoordinates(int x, int y)
